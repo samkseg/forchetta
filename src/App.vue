@@ -6,22 +6,22 @@
         </header>
 
         <nav class="menu">
-            <a href="">Start</a>
-            <a href="">Category</a>
-            <a href="">Recept</a>
-            <a><Button></Button></a>
+            <a href="">Start</a><br>
+            <a href="">Category</a><br>
+            <a href="">Recipe</a>
         </nav>
 
         <main class="main">
             <ul>
                 <li v-for="(item, index) in list" :key="index">{{ item }}</li>
             </ul>
+            <Button></Button>
         </main>
     </div>
 </template>
 
 <script>
-import Button from "./Button.vue"
+import Button from "./components/Button.vue"
 
 export default {
     components: {
@@ -29,14 +29,11 @@ export default {
     },
     data() {
         return {
-            headerText: "Forchetta Receptbok",
-            paragraphText: "Nånting om recept",
-            list: ["Recept 1", "Recept 2", "Recept 3"]
+            headerText: "Forchetta Pasta Recipes",
+            paragraphText: "Something about pasta",
+            list: ["Recipe 1", "Recipe 2", "Recipe 3"]
         }
     }
 }
 
 </script>
-
-<style>
-</style>
