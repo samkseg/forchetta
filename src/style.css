@@ -1,0 +1,46 @@
+* {
+    background-color: darkslategrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.menu a {
+    display: table;
+}
+
+.header {
+    grid-area: header;
+    color: yellow;
+    font-size: 36px;
+    width: 100vw;
+}
+
+p {
+    color: lightyellow;
+}
+
+.main {
+    grid-area: main;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.full-page-layout {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+        'header header header header'
+        'menu main main main'
+        'footer footer footer footer';
+    gap: 0;
+}
