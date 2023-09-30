@@ -13,16 +13,19 @@
         </nav>
 
         <main class="main">
+            <SearchBar></SearchBar>
             <Recipes></Recipes>
         </main>
     </div>
 </template>
 
 <script>
+import SearchBar from "./components/SearchBar.vue"
 import Recipes from "./components/Recipes.vue"
 
 export default {
     components: {
+        SearchBar,
         Recipes
     },
     data() {

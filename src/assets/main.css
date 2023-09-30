@@ -53,6 +53,7 @@ a,
   text-align: left;
   color: black;
   padding-left: 10px;
+  padding-right: 10px;
 }
 a {
   padding-left: 10px;
@@ -62,7 +63,6 @@ a {
   grid-area: header;
   color: black;
   font-size: 36px;
-  max-width: 1280px;
 }
 
 .header-text {
@@ -87,9 +87,10 @@ ul {
   width: 100vw;
   height: 100vh;
   grid-template-areas:
-    'header header header header header header'
-    'menu main main main main main'
-    'footer footer footer footer footer footer';
+    'header header header header header'
+    'menu main main main main'
+    'footer footer footer footer footer';
   grid-auto-rows: 1fr;
+  /* grid-template-columns: repeat(5, 200px); */
   gap: 0;
 }

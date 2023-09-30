@@ -1,0 +1,10 @@
+.search-bar{
+    display: flex;
+  }
+  
+  .search-field {
+    min-width: 470px;
+    height: 45px;
+    text-align: left;
+    flex-grow: 1;
+  }

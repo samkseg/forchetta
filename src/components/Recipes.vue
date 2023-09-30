@@ -38,7 +38,7 @@ export default {
             paragraph.appendChild(document.createTextNode(item.description));
             paragraph.appendChild(document.createElement("br"));
             footer.appendChild(document.createTextNode(item.ingredients.length + " Ingredients | " + item.timeInMins + " Minutes"));
-            
+
             top.appendChild(paragraph);
             listItem.append(top);
             listItem.appendChild(footer);
