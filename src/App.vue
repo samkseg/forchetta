@@ -2,36 +2,33 @@
     <div class="full-page-layout">
         <header class="header">
             <h1>{{ headerText }}</h1>
-            <p>{{ paragraphText }}</p>
+            <p class="header-text">{{ paragraphText }}</p>
         </header>
 
         <nav class="menu">
-            <a href="">Start</a><br>
-            <a href="">Category</a><br>
-            <a href="">Recipe</a>
+            <h2 class="menu-header">Categories</h2><br>
+            <a href="">Category 1</a><br>
+            <a href="">Category 2</a><br>
+            <a href="">Category 3</a>
         </nav>
 
         <main class="main">
-            <ul>
-                <li v-for="(item, index) in list" :key="index">{{ item }}</li>
-            </ul>
-            <Button></Button>
+            <Recipes></Recipes>
         </main>
     </div>
 </template>
 
 <script>
-import Button from "./components/Button.vue"
+import Recipes from "./components/Recipes.vue"
 
 export default {
     components: {
-        Button
+        Recipes
     },
     data() {
         return {
-            headerText: "Forchetta Pasta Recipes",
-            paragraphText: "Something about pasta",
-            list: ["Recipe 1", "Recipe 2", "Recipe 3"]
+            headerText: "Forchetta Italia",
+            paragraphText: "Welcome to this unique website for recipes from the Italian cuisine!",
         }
     }
 }

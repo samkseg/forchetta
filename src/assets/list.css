@@ -1,0 +1,30 @@
+.list-item {
+    background-color: lightgray;
+    margin-bottom: 10px;
+
+}
+
+.thumb-nail {
+    padding: 25px;
+    float: left;
+    max-width: 200px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-header {
+    text-align: left;
+}
+
+.recipe-info {
+    text-align: left;
+}
+
+.footer {
+    text-align: left;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}

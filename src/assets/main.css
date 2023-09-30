@@ -4,20 +4,20 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
-
+  background-color: white;
   font-weight: normal;
 }
 
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: rgb(0, 0, 0);
   transition: 0.4s;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: hsla(0, 0%, 64%, 0.2);
   }
 }
 
@@ -35,7 +35,6 @@ a,
 }
 
 * {
-  background-color: darkslategrey;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   justify-content: center;
   text-align: center;
@@ -45,17 +44,34 @@ a,
 
 .menu {
   grid-area: menu;
+  background-color: lightgray;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.menu-header {
+  text-align: left;
+  color: black;
+  padding-left: 10px;
+}
+a {
+  padding-left: 10px;
 }
 
 .header {
   grid-area: header;
-  color: yellow;
+  color: black;
   font-size: 36px;
-  width: 100vw;
+  max-width: 1280px;
+}
+
+.header-text {
+  color: black;
+  font-size: 28px;
 }
 
 p {
-  color: lightyellow;
+  color: black;
 }
 
 .main {
@@ -71,8 +87,9 @@ ul {
   width: 100vw;
   height: 100vh;
   grid-template-areas:
-      'header header header header header header'
-      'menu main main main main main'
-      'footer footer footer footer footer footer';
+    'header header header header header header'
+    'menu main main main main main'
+    'footer footer footer footer footer footer';
+  grid-auto-rows: 1fr;
   gap: 0;
 }
