@@ -17,6 +17,8 @@ export default {
         for (let item of data) {
             let listItem = document.createElement("li");
             listItem.classList.add("list-item");
+            let link = document.createElement("a");
+            link.setAttribute("href", "#");
             let top = document.createElement("div");
             top.classList.add("top");
             let paragraph = document.createElement("p");
@@ -40,8 +42,9 @@ export default {
             footer.appendChild(document.createTextNode(item.ingredients.length + " Ingredients | " + item.timeInMins + " Minutes"));
 
             top.appendChild(paragraph);
-            listItem.append(top);
-            listItem.appendChild(footer);
+            link.appendChild(top)
+            link.appendChild(footer);
+            listItem.append(link);
             list.appendChild(listItem);
         }
     }
