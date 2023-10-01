@@ -14,14 +14,14 @@
 
         <main class="main">
             <SearchBar></SearchBar>
-            <Recipes></Recipes>
+            <router-view :key="$route.fullPath"></router-view>
         </main>
     </div>
 </template>
 
 <script>
-import SearchBar from "./components/SearchBar.vue"
 import Recipes from "./components/Recipes.vue"
+import SearchBar from "./components/SearchBar.vue"
 
 export default {
     components: {
@@ -32,6 +32,7 @@ export default {
         return {
             headerText: "Forchetta Italia",
             paragraphText: "Welcome to this unique website for recipes from the Italian cuisine!",
+            // searchText: ""
         }
     }
 }
