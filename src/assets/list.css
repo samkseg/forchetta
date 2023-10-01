@@ -18,10 +18,23 @@
     flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 20px;
+    
 }
 
-.recipe-header {
+.header-div {
+    font-size: x-large;
+    text-align: right;
+}
+
+.header-title {
+    font-size: xx-large;
     text-align: left;
+}
+
+.header-rating {
+    margin-top: 10px;
+    float: right;
 }
 
 .recipe-info {
@@ -32,5 +45,5 @@
 .footer {
     text-align: left;
     padding-left: 20px;
-    padding-bottom: 0px;
+    padding-bottom: 20px;
 }

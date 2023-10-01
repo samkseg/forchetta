@@ -19,11 +19,6 @@ export default {
             listItem.classList.add("list-item");
             let link = document.createElement("a");
             link.setAttribute("href", "#");
-            let id = item._id;
-            link.addEventListener("click", function(id) {
-                let url = id;
-                window.location.href = "";
-            });
             let top = document.createElement("div");
             top.classList.add("top");
             let paragraph = document.createElement("p");
@@ -33,14 +28,42 @@ export default {
             let img = document.createElement("img");
             img.classList.add("thumb-nail");
             img.src = item.imageUrl;
-            let header = document.createElement("h2");
-            header.classList.add("recipe-header");
-
-            let rating = Math.round(item.avgRating * 2) / 2;
 
             paragraph.appendChild(img);
-            header.appendChild(document.createTextNode(item.title + " " + rating + "/5"));
-            paragraph.appendChild(header);
+
+            let header = document.createElement("h2");
+            header.classList.add("header-title");
+            header.appendChild(document.createTextNode(item.title));
+
+            let score = Math.round(item.avgRating * 2) / 2;
+
+            let headerDiv = document.createElement("div");
+            headerDiv.classList.add("header-div");
+            let headerSpan = document.createElement("span");
+            headerSpan.classList.add("header-rating");
+            headerDiv.appendChild(headerSpan);
+            headerDiv.appendChild(header);
+            let count = 5;
+
+            while (count > 0) {
+                let span = document.createElement("span");
+                let star = document.createElement("i");
+                if (score > 0.5) {
+                    star.classList.add("fa", "fa-star");
+                } else
+                    if (score == 0.5) {
+                        star.classList.add("fa", "fa-star-half-o");
+                    } else
+                        if (score < 0.5) {
+                            star.classList.add("fa", "fa-star-o");
+                        }
+                span.appendChild(star);
+                headerSpan.appendChild(span);
+                score -= 1;
+                count -= 1;
+            }
+
+            paragraph.appendChild(headerDiv);
             paragraph.appendChild(document.createTextNode(item.description));
             paragraph.appendChild(document.createElement("br"));
             footer.appendChild(document.createTextNode(item.ingredients.length + " Ingredients | " + item.timeInMins + " Minutes"));
