@@ -5,9 +5,9 @@
 }
 
 .thumb-nail {
-    padding-right: 25px;
+    padding-right: 20px;
     padding-top: 15x;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     float: left;
     max-width: 200px;
 }
@@ -15,8 +15,8 @@
 .top {
     display: flex;
     flex-direction: column;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .recipe-header {
@@ -29,6 +29,6 @@
 
 .footer {
     text-align: left;
-    padding-left: 25px;
+    padding-left: 20px;
     padding-bottom: 0px;
 }
