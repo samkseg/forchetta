@@ -57,8 +57,12 @@ a,
   padding-right: 15px;
   padding-bottom: 5px;
 }
-a {
+.menu-links {
   font-size: medium;
+  text-align: left;
+}
+
+a {
   padding-left: 15px;
   padding-right: 15px;
 }
