@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     padding-left: 25px;
+    padding-right: 25px;
 }
 
 .recipe-header {
@@ -22,7 +23,7 @@
 }
 
 .recipe-info {
-    text-align: left;
+    text-align: justify;
 }
 
 .footer {
