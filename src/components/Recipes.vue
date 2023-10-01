@@ -19,6 +19,11 @@ export default {
             listItem.classList.add("list-item");
             let link = document.createElement("a");
             link.setAttribute("href", "#");
+            let id = item._id;
+            link.addEventListener("click", function(id) {
+                let url = id;
+                window.location.href = "";
+            });
             let top = document.createElement("div");
             top.classList.add("top");
             let paragraph = document.createElement("p");
@@ -47,7 +52,7 @@ export default {
             listItem.append(link);
             list.appendChild(listItem);
         }
-    }
+    },
 }
 </script>
 
