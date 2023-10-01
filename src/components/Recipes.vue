@@ -39,7 +39,6 @@ export default {
             let rating = Math.round(item.avgRating * 2) / 2;
 
             paragraph.appendChild(img);
-            paragraph.appendChild(document.createElement("br"));
             header.appendChild(document.createTextNode(item.title + " " + rating + "/5"));
             paragraph.appendChild(header);
             paragraph.appendChild(document.createTextNode(item.description));
