@@ -52,15 +52,20 @@ a,
 .menu-header {
   text-align: left;
   color: black;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
 }
 a {
-  padding-left: 10px;
+  font-size: medium;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .header {
   grid-area: header;
+  margin-bottom: 25px;
   color: black;
   font-size: 36px;
 }
@@ -90,7 +95,6 @@ ul {
     'header header header header header'
     'menu main main main main'
     'footer footer footer footer footer';
-  grid-auto-rows: 1fr;
-  /* grid-template-columns: repeat(5, 200px); */
+  align-content: flex-start;
   gap: 0;
 }
