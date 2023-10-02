@@ -4,12 +4,9 @@
             <h1>{{ headerText }}</h1>
             <p class="header-text">{{ paragraphText }}</p>
         </header>
-
+        
         <nav class="menu">
-            <h2 class="menu-header">Categories</h2><br>
-            <a href="">Category 1</a><br>
-            <a href="">Category 2</a><br>
-            <a href="">Category 3</a>
+            <Menu></Menu>
         </nav>
 
         <main class="main">
@@ -22,9 +19,13 @@
 <script>
 import Recipes from "./components/Recipes.vue"
 import SearchBar from "./components/SearchBar.vue"
+import Categories from "./components/Categories.vue"
+import Menu from "./components/Menu.vue"
 
 export default {
     components: {
+        Menu,
+        Categories,
         SearchBar,
         Recipes
     },
@@ -32,9 +33,7 @@ export default {
         return {
             headerText: "Forchetta Italia",
             paragraphText: "Welcome to this unique website for recipes from the Italian cuisine!",
-            // searchText: ""
         }
     }
 }
-
 </script>
