@@ -17,14 +17,13 @@ export default {
     },
     methods: {
         searchList: function () {
-            this.$router.push({ name: "Search", params: { search: this.searchText } })
-            sessionStorage.setItem('searchText', this.searchText);
-        },
-        saveFormState: function () {
-            sessionStorage.setItem('searchText', this.searchText);
+            if (this.searchText != null & this.searchText != "") {
+                this.$router.push({ name: "Search", params: { search: this.searchText } })
+                sessionStorage.setItem("searchText", this.searchText);
+            }
         },
         initFormState: function () {
-            const searchText = sessionStorage.getItem('searchText') || "";
+            const searchText = sessionStorage.getItem("searchText") || "";
             if (searchText != null) {
                 this.searchText = searchText;
             }

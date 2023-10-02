@@ -74,7 +74,7 @@ export default {
             listItem.append(link);
             list.appendChild(listItem);
         }
-    },
+    }
 }
 </script>
 
