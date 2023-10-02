@@ -55,7 +55,7 @@ export default {
                 let listItem = document.createElement("li");
                 listItem.classList.add("list-item");
                 let link = document.createElement("a");
-                link.setAttribute("href", "#");
+                link.setAttribute("href", "javascript:(void)");
                 let top = document.createElement("div");
                 top.classList.add("top");
                 let paragraph = document.createElement("p");
