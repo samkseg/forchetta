@@ -11,7 +11,7 @@
 
         <main class="main">
             <SearchBar></SearchBar>
-            <router-view :key="$route.fullPath"></router-view>
+            <RouterView :key="$route.fullPath"></RouterView>
         </main>
     </div>
 </template>
