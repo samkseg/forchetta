@@ -9,10 +9,10 @@ export default {
         return {}
     },
     props: {
-        category: ""
+        categoryId: ""
     },
     async created() {
-        let response = await fetch("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/categories/" + this.category + "/recipes");;
+        let response = await fetch("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/categories/" + this.categoryId + "/recipes");;
         const data = await response.json();
         let list = document.getElementById("recipes");
         for (let item of data) {

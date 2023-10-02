@@ -5,7 +5,7 @@
             <RouterLink :to='{ name: "Start" }'>All({{ all.length }})<br></RouterLink>
         </li>
         <li class="menu-links" v-for="item in categories" :key="item.id">
-            <RouterLink :to='{ name: "Category", params: { category: item.name } }'>{{ item.name }}({{ item.count }}) <br>
+            <RouterLink :to='{ name: "Category", params: { categoryId: item.name } }'>{{ item.name }}({{ item.count }}) <br>
             </RouterLink>
         </li>
     </ul>

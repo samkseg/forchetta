@@ -10,7 +10,7 @@ import App from './App.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: "/category/:category", name: "Category", props: true, component: Categories },
+        { path: "/category/:categoryId", name: "Category", props: true, component: Categories },
         { path: "/search/:search", name: "Search", props: true, component: Search},
         { path: "/", name: "Start", component: Recipes },
     ]
