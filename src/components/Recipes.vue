@@ -23,7 +23,8 @@ export default {
                 }
                 if(this.categoryId) {
                     this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/categories/" + this.categoryId + "/recipes").then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
-                }if(this.search) {
+                }
+                if(this.search) {
                     this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes?query=" + this.search).then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
                 }
             },
@@ -55,7 +56,7 @@ export default {
                 let listItem = document.createElement("li");
                 listItem.classList.add("list-item");
                 let link = document.createElement("a");
-                link.setAttribute("href", "#");
+                link.setAttribute("href", "javascript:(void)");
                 let top = document.createElement("div");
                 top.classList.add("top");
                 let paragraph = document.createElement("p");
