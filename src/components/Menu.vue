@@ -16,7 +16,7 @@ export default {
     data() {
         return {
             categories: [],
-            all: [],
+            all: []
         }
     },
     async mounted() {

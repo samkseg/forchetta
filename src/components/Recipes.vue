@@ -96,7 +96,7 @@ export default {
                 footer.appendChild(document.createTextNode(item.ingredients.length + " Ingredients | " + item.timeInMins + " Minutes"));
 
                 top.appendChild(paragraph);
-                link.appendChild(top)
+                link.appendChild(top);
                 link.appendChild(footer);
                 listItem.append(link);
                 list.appendChild(listItem);
