@@ -10,18 +10,29 @@ export default {
 
         }
     },
+    props: {
+        categoryId: "",
+        search: ""
+    },
     async created() {
         this.$watch(
             () => this.$route.params,
             () => {
-                this.fetchData().then(data => { this.renderData(data); }).catch((error) => console.log("Error"));;
+                if(!this.categoryId && !this.search) {
+                    this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes").then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
+                }
+                if(this.categoryId) {
+                    this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/categories/" + this.categoryId + "/recipes").then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
+                }if(this.search) {
+                    this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes?query=" + this.search).then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
+                }
             },
             { immediate: true }
         )
     },
     methods: {
-        fetchData: async function () {
-            let response = await fetch("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes");
+        fetchData: async function (url) {
+            let response = await fetch(url);
             const data = await response.json();
             return data;
         },

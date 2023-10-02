@@ -19,13 +19,11 @@
 <script>
 import Recipes from "./components/Recipes.vue"
 import SearchBar from "./components/SearchBar.vue"
-import Categories from "./components/Categories.vue"
 import Menu from "./components/Menu.vue"
 
 export default {
     components: {
         Menu,
-        Categories,
         SearchBar,
         Recipes
     },
