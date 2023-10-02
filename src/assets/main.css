@@ -1,39 +1,5 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0;
-  background-color: white;
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(0, 0%, 64%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
-
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   justify-content: center;
@@ -42,26 +8,35 @@ a,
   margin: 0px;
 }
 
-.menu {
-  grid-area: menu;
-  background-color: lightgray;
-  margin-right: 20px;
-  text-align: left;
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: white;
+  font-weight: normal;
 }
 
-.menu-header {
-  text-align: left;
-  color: black;
-  padding-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 5px;
+.full-page-layout {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    'header header header header header'
+    'menu main main main main'
+    'footer footer footer footer footer';
+  align-content: flex-start;
+  gap: 0;
+  overflow-x: hidden;
 }
-.menu-links {
-  font-size: medium;
-  text-align: left;
-  padding-left: 15px;
-  padding-right: 15px;
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: 0.4s;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .header {
@@ -89,15 +64,22 @@ ul {
   list-style-type: none;
 }
 
-.full-page-layout {
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-template-areas:
-    'header header header header header'
-    'menu main main main main'
-    'footer footer footer footer footer';
-  align-content: flex-start;
-  gap: 0;
-  overflow-x: hidden;
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(0, 0%, 16%, 0.572);
+    color: white;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
 }
