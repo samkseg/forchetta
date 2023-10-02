@@ -4,7 +4,7 @@
         <li class="menu-links">
             <RouterLink :to='{ name: "Start" }'>All({{ all.length }})<br></RouterLink>
         </li>
-        <li class="menu-links" v-for="item in categories" :key="item.id">
+        <li class="menu-links" v-for="item in categories" :key="item._id">
             <RouterLink :to='{ name: "Category", params: { categoryId: item.name } }'>{{ item.name }}({{ item.count }}) <br>
             </RouterLink>
         </li>
@@ -22,7 +22,7 @@ export default {
     async mounted() {
         let responseCategories = await fetch("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/categories");
         this.categories = await responseCategories.json();
-        let responseAll = await fetch("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/categories");
+        let responseAll = await fetch("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes");
         this.all = await responseAll.json();
     }
 }
