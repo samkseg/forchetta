@@ -73,6 +73,11 @@ p {
   max-width: 800px;
 }
 
+.main-recipe {
+  grid-area: main;
+  max-width: 1280px;
+}
+
 ul {
   list-style-type: none;
 }

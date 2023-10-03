@@ -1,7 +1,6 @@
 <template>
     <ul id="recipes">
     </ul>
-    <a href="javascript:(void)" @onclick="loadRecipe">Link</a>
 </template>
 
 <script>

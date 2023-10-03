@@ -20,7 +20,7 @@
             <p class="header-text">{{ paragraphText }}</p>
         </header>
 
-        <main class="main">
+        <main class="main-recipe">
             <RouterView :key="$route.fullPath"></RouterView>
         </main>
     </div>

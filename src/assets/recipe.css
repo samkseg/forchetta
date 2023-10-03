@@ -1,4 +1,22 @@
 #recipe {
     color: black;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.recipe-image {
+    margin-right: 20px;
+    margin-top: 15x;
+    margin-bottom: 15px;
+    float: right;
+    max-width: 400px;
+    border: 5px solid hsla(0, 0%, 0%, 0.784);
+}
+
+.description {
+    display: flex;
 }
