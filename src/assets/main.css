@@ -29,6 +29,19 @@
   overflow-x: hidden;
 }
 
+.recipe-page-layout {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    'header header header'
+    'main main main'
+    'footer footer footer';
+  align-content: flex-start;
+  gap: 0;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: rgb(0, 0, 0);
