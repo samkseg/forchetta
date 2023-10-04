@@ -1,5 +1,5 @@
 <template>
-    <div id="recipe"></div>
+    <div id="recipe" class="recipe-item-layout"></div>
 </template>
 
 <script>
@@ -19,24 +19,55 @@ export default {
             const data = await response.json();
             return data;
         },
-        renderData: function(data) {
+        renderStar: function (score) {
+            let star = document.createElement("i");
+            if (score > 0.5) {
+                star.classList.add("fa", "fa-star");
+            } else
+                if (score == 0.5) {
+                    star.classList.add("fa", "fa-star-half-o");
+                } else
+                    if (score < 0.5) {
+                        star.classList.add("fa", "fa-star-o");
+                    }
+            return star;
+        },
+        renderData: function (data) {
             let recipe = document.getElementById("recipe");
-            
+
             let h1 = document.createElement("h1");
+            h1.classList.add("header");
             h1.innerHTML = data.title;
 
+            let description = document.createElement("div");
             let paragraph = document.createElement("p");
             paragraph.classList.add("description");
+            let infoBar = document.createElement("div");
+            infoBar.classList.add("info-bar");
+            description.appendChild(paragraph);
+
+            let score = Math.round(data.avgRating * 2) / 2;
+            let count = 5;
+
+            while (count > 0) {
+                let span = document.createElement("span");
+                span.appendChild(this.renderStar(score));
+                infoBar.appendChild(span);
+                score -= 1;
+                count -= 1;
+            }
+            infoBar.appendChild(document.createTextNode("| " + data.ingredients.length + " INGREDIENTS | " + data.timeInMins + " MIN"));
+
+            paragraph.appendChild(document.createTextNode(data.description));
+            description.appendChild(infoBar);
+
             let img = document.createElement("img");
             img.classList.add("recipe-image");
             img.src = data.imageUrl;
 
-            paragraph.appendChild(document.createTextNode(data.description));
-            paragraph.appendChild(img);
-
             recipe.appendChild(h1);
-            recipe.appendChild(document.createElement("br"));
-            recipe.appendChild(paragraph);
+            recipe.appendChild(description);
+            recipe.appendChild(img);
         }
     }
 }
