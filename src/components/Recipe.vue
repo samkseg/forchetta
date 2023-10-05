@@ -1,5 +1,8 @@
 <template>
-    <div id="recipe" class="recipe-item-layout"></div>
+    <div id="recipe">
+        <div id="recipe-top-layout"></div>
+        <div id="recipe-middle-layout"></div>
+    </div>
 </template>
 
 <script>
@@ -33,8 +36,11 @@ export default {
             return star;
         },
         renderData: function (data) {
-            let recipe = document.getElementById("recipe");
-
+            this.renderTop(data);
+            this.renderMiddle(data);
+        },
+        renderTop: function(data) {
+            let top = document.getElementById("recipe-top-layout");
             let h1 = document.createElement("h1");
             h1.classList.add("header");
             h1.innerHTML = data.title;
@@ -56,7 +62,7 @@ export default {
                 score -= 1;
                 count -= 1;
             }
-            infoBar.appendChild(document.createTextNode("| " + data.ingredients.length + " INGREDIENTS | " + data.timeInMins + " MIN"));
+            infoBar.appendChild(document.createTextNode(" | " + data.ingredients.length + " INGREDIENTS | " + data.timeInMins + " MIN"));
 
             paragraph.appendChild(document.createTextNode(data.description));
             description.appendChild(infoBar);
@@ -65,9 +71,45 @@ export default {
             img.classList.add("recipe-image");
             img.src = data.imageUrl;
 
-            recipe.appendChild(h1);
-            recipe.appendChild(description);
-            recipe.appendChild(img);
+            top.appendChild(h1);
+            top.appendChild(description);
+            top.appendChild(img);
+        },
+        renderMiddle: function(data) {
+            let middle = document.getElementById("recipe-middle-layout");
+            let ingredients = document.createElement("div");
+            let ingredientsH = document.createElement("h2");
+            ingredientsH.innerHTML = "Ingredients";
+            ingredientsH.classList.add("ing-header");
+            ingredients.classList.add("ingredient");
+
+            let ingredientsList = document.createElement("ul");
+            for (let ingredient of data.ingredients) {
+                let ingredientItem = document.createElement("li");
+                ingredientItem.innerHTML = ingredient.amount + " " + ingredient.unit + " " + ingredient.name;
+                ingredientsList.appendChild(ingredientItem);
+            }
+            ingredients.appendChild(ingredientsList);
+
+            let instructions = document.createElement("div");
+            let instructionsH = document.createElement("h2");
+            instructionsH.innerHTML = "Instructions";
+            instructionsH.classList.add("ins-header");
+            instructions.classList.add("instruction");
+
+            let instructionsList = document.createElement("ul");
+            for (let instruction of data.instructions) {
+                let instructionItem = document.createElement("li");
+                instructionItem.classList.add("instruction-item");
+                instructionItem.innerHTML = instruction;
+                instructionsList.appendChild(instructionItem);
+            }
+            instructions.appendChild(instructionsList);
+
+            middle.appendChild(ingredientsH);
+            middle.appendChild(instructionsH);
+            middle.appendChild(ingredients);
+            middle.appendChild(instructions);
         }
     }
 }

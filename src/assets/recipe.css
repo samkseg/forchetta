@@ -4,20 +4,33 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    max-width: 1000px;
+
 }
 
-.recipe-item-layout {
+#recipe-top-layout {
     display: grid;
     width: 100vw;
     height: 100vh;
     grid-template-areas:
-      'header header header'
-      'description description image'
-      'ingredient instruction instuction';
+        'header header header'
+        'description description image';
     align-content: flex-start;
     gap: 0;
     overflow-x: hidden;
+    max-width: 1000px;
+    height: auto;
+}
+
+#recipe-middle-layout {
+    display: grid;
+    grid-template-areas:
+        'ing-header ins-header ins-header'
+        'ingredient instruction instruction';
+    grid-template-columns: repeat(3, 1fr);
+    align-content: flex-start;
+    gap: 0;
+    overflow-x: hidden;
+    max-width: 1000px;
 }
 
 .header {
@@ -26,7 +39,8 @@
 
 .recipe-image {
     grid-area: image;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     margin-top: 15x;
     margin-bottom: 15px;
     float: right;
@@ -50,4 +64,50 @@
     padding: 10px;
     background-color: lightgray;
     font-size: x-large;
+}
+
+.ing-header {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.ingredient {
+    grid-area: ingredient;
+    background-color: lightgray;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+li {
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+}
+
+.ins-header {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.instruction {
+    grid-area: instruction;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: large;
+}
+
+.instruction-item {
+    background-color: lightgray;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+hr {
+    margin-left: 10px;
+    margin-right: 10px;
 }
