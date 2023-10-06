@@ -1,9 +1,6 @@
 #recipe {
     color: black;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
 
 }
 
@@ -16,7 +13,6 @@
         'description description image';
     align-content: flex-start;
     gap: 0;
-    overflow-x: hidden;
     max-width: 1000px;
     height: auto;
 }
@@ -29,7 +25,6 @@
     grid-template-columns: repeat(3, 1fr);
     align-content: flex-start;
     gap: 0;
-    overflow-x: hidden;
     max-width: 1000px;
 }
 
@@ -125,4 +120,3 @@ hr {
 .fa {
     color: goldenrod;
 }
-

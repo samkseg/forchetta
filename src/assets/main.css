@@ -9,8 +9,6 @@
 }
 
 #app {
-  margin: 0 auto;
-  padding: 0;
   background-color: #fffff0;
   font-weight: normal;
 }
@@ -24,7 +22,6 @@
     'menu main main main main'
     'footer footer footer footer footer';
   align-content: flex-start;
-  gap: 0;
   overflow-x: hidden;
 }
 
@@ -37,7 +34,6 @@
     'main main main'
     'footer footer footer';
   align-content: flex-start;
-  gap: 0;
   overflow-x: hidden;
 }
 
@@ -84,24 +80,3 @@ p {
 ul {
   list-style-type: none;
 }
-
-@media (hover: hover) {
-  a:hover {
-    color: black;
-    font-weight: bold;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
-

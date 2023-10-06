@@ -98,7 +98,7 @@ export default {
                 paragraph.appendChild(headerDiv);
                 paragraph.appendChild(document.createTextNode(item.description));
                 paragraph.appendChild(document.createElement("br"));
-                footer.appendChild(document.createTextNode(item.ingredients.length + " Ingredients | " + item.timeInMins + " Minutes"));
+                footer.appendChild(document.createTextNode(item.ingredients.length + " INGREDIENTS | " + item.timeInMins + " MINUTES"));
 
                 top.appendChild(paragraph);
                 link.appendChild(top);

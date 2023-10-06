@@ -14,12 +14,20 @@
   padding-right: 15px;
   padding-bottom: 5px;
 }
+
 .menu-links {
   font-size: medium;
   text-align: left;
   padding-left: 15px;
   padding-right: 15px;
 }
+
+a:hover {
+  color: black;
+  font-weight: bold;
+  transition: 80ms;
+}
+
 .router-link-active {
   font-weight: bold;
 }
