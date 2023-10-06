@@ -1,5 +1,6 @@
 import './assets/main.css'
 import Recipes from "./components/Recipes.vue"
+import Recipe from "./components/Recipe.vue"
 
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -8,6 +9,7 @@ import App from './App.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
+        { path: "/recipe/:recipeId", name: "Recipe", props: true, component: Recipe },
         { path: "/category/:categoryId", name: "Category", props: true, component: Recipes },
         { path: "/search/:search", name: "Search", props: true, component: Recipes},
         { path: "/", name: "Start", component: Recipes },
