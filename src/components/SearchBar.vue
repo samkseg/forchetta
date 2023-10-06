@@ -1,6 +1,6 @@
 <template>
     <div class="search-bar">
-        <input class="search-field" type="text" v-model="searchText" @keypress.enter="searchList" placeholder=" Search Recipe...">
+        <input class="search-field" type="text" v-model="searchText" @keypress.enter="searchList" placeholder="Search Recipe...">
     </div>
 </template>
 

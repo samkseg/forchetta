@@ -1,7 +1,9 @@
 <template>
     <div v-if='["Start", "Category", "Search"].includes($route.name)' class="full-page-layout">
         <header class="header">
-            <h1>{{ headerText }}</h1>
+            <h1>{{ headerText }}
+            <img class="italy" src="./assets/flag-italy.png" alt="Italian flag">
+            </h1>
             <p class="header-text">{{ paragraphText }}</p>
         </header>
         
@@ -16,7 +18,9 @@
     </div>
     <div v-if='["Recipe"].includes($route.name)' class="recipe-page-layout">
         <header class="header">
-            <h1>{{ headerText }}</h1>
+            <h1>{{ headerText }}
+            <img class="italy" src="./assets/flag-italy.png" alt="Italian flag">
+            </h1>
             <p class="header-text">{{ paragraphText }}</p>
         </header>
 

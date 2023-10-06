@@ -1,8 +1,9 @@
 .menu {
   grid-area: menu;
-  background-color: lightgray;
+  background-color: #c8d6e0ad;
   margin-right: 20px;
   text-align: left;
+  border-radius: 5px;
 }
 
 .menu-header {
