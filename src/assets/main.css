@@ -9,10 +9,9 @@
 }
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 0;
-  background-color: white;
+  background-color: #fffff0;
   font-weight: normal;
 }
 
@@ -44,7 +43,7 @@
 
 a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: black;
   transition: 0.4s;
 }
 
@@ -59,11 +58,15 @@ ul {
   font-size: 36px;
 }
 
-.header-text {
-  color: black;
-  font-size: 28px;
+.italy {
+  max-width: 70px;
 }
 
+.header-text {
+  font-size: 28px;
+  color: black;
+}
+  
 p {
   color: black;
 }
@@ -84,8 +87,8 @@ ul {
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(0, 0%, 16%, 0.572);
-    color: white;
+    color: black;
+    font-weight: bold;
   }
 }
 
@@ -101,3 +104,4 @@ ul {
     padding: 0 2rem;
   }
 }
+

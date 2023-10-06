@@ -45,7 +45,7 @@
     margin-bottom: 15px;
     float: right;
     max-width: 333px;
-    border: 5px solid hsla(0, 0%, 0%, 0.784);
+    border-radius: 5px;
 }
 
 .description {
@@ -55,26 +55,33 @@
     display: flex;
     font-size: large;
     text-align: justify;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .info-bar {
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 10px;
-    background-color: lightgray;
+    background-color: #c8d6e0ad;
     font-size: x-large;
+    border-radius: 5px;
 }
 
 .ing-header {
     margin-left: 10px;
     margin-bottom: 20px;
+    color: black;
+    padding-top: 10px;
 }
 
 .ingredient {
     grid-area: ingredient;
-    background-color: lightgray;
-    padding: 20px;
+    background-color: #c8d6e0ad;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 15px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -92,6 +99,8 @@ h2 {
 .ins-header {
     margin-left: 10px;
     margin-bottom: 20px;
+    color: black;
+    padding-top: 10px;
 }
 
 .instruction {
@@ -102,8 +111,9 @@ h2 {
 }
 
 .instruction-item {
-    background-color: lightgray;
-    padding: 20px;
+    background-color: #c8d6e0ad;
+    border-radius: 5px;
+    padding: 15px;
     margin-bottom: 10px;
 }
 
@@ -111,3 +121,8 @@ hr {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.fa {
+    color: goldenrod;
+}
+
