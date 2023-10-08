@@ -2,13 +2,19 @@
     <div id="recipe">
         <div id="recipe-top-layout"></div>
         <div id="recipe-middle-layout"></div>
+        <Rating :recipeId="recipeId"></Rating>
     </div>
 </template>
 
 <script>
+import Rating from "./Rating.vue"
 export default {
+    components: {
+        Rating
+    },
     data() {
-        return {}
+        return {
+        }
     },
     props: {
         recipeId: ""
@@ -25,13 +31,13 @@ export default {
         renderStar: function (score) {
             let star = document.createElement("i");
             if (score > 0.5) {
-                star.classList.add("fa", "fa-star");
+                star.classList.add("fa", "fa-star", "info-rating");
             } else
                 if (score == 0.5) {
-                    star.classList.add("fa", "fa-star-half-o");
+                    star.classList.add("fa", "fa-star-half-o", "info-rating");
                 } else
                     if (score < 0.5) {
-                        star.classList.add("fa", "fa-star-o");
+                        star.classList.add("fa", "fa-star-o", "info-rating");
                     }
             return star;
         },
@@ -52,7 +58,7 @@ export default {
             infoBar.classList.add("info-bar");
             description.appendChild(paragraph);
 
-            let score = Math.round(data.avgRating * 2) / 2;
+            let score = Math.round((data.avgRating * 2) / 2);
             let count = 5;
 
             while (count > 0) {
