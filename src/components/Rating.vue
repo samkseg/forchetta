@@ -6,7 +6,6 @@
         <br>
         <h1>Thank you for your rating!</h1>
         <br>
-        <br>
     </div>
     <div v-else="isRated">
         <h1>How did you like the recipe?</h1>
@@ -43,7 +42,7 @@ export default {
             link.onmouseleave = () => { this.selectStars(0) };
             let star = document.createElement("i");
             star.classList.add("fa", "fa-star-o", "rating-star");
-            star.setAttribute("id", "star" + rate)
+            star.setAttribute("id", "star" + rate);
             link.append(star);
             ratingBar.appendChild(link);
         }

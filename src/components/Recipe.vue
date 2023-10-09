@@ -58,7 +58,7 @@ export default {
             infoBar.classList.add("info-bar");
             description.appendChild(paragraph);
 
-            let score = Math.round((data.avgRating * 2) / 2);
+            let score = Math.round(data.avgRating * 2) / 2;
             let count = 5;
 
             while (count > 0) {
