@@ -16,10 +16,8 @@ export default {
     },
     methods: {
         dynamicSearch: function() {
-            console.log("in dynamicSearch");
             if (this.searchText != null & this.searchText != "") {
                 this.$router.push({ name: "Search", params: { search: this.searchText } })
-                console.log("inside IF");
             }
         }, 
         enterSearch: function () {
