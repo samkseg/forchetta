@@ -2,10 +2,10 @@
     <h2 class="menu-header">Categories</h2>
     <ul>
         <li class="menu-links">
-            <RouterLink :to='{ name: "Start" }'>All({{ all.length }})<br></RouterLink>
+            <RouterLink @click="$emit('clearSearchBar')" :to='{ name: "Start" }'>All({{ all.length }})<br></RouterLink>
         </li>
         <li class="menu-links" v-for="item in categories" :key="item._id">
-            <RouterLink :to='{ name: "Category", params: { categoryId: item.name } }'>{{ item.name }}({{ item.count }}) <br>
+            <RouterLink @click="$emit('clearSearchBar')" :to='{ name: "Category", params: { categoryId: item.name } }'>{{ item.name }}({{ item.count }}) <br>
             </RouterLink>
         </li>
     </ul>
@@ -13,6 +13,7 @@
 
 <script>
 export default {
+    emits: ["clearSearchBar"],
     data() {
         return {
             categories: [],

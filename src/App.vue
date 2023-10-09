@@ -8,11 +8,11 @@
         </header>
         
         <nav class="menu">
-            <Menu></Menu>
+            <Menu @clearSearchBar="clearSearchBar"></Menu>
         </nav>
 
         <main class="main">
-            <SearchBar></SearchBar>
+            <SearchBar ref="child"></SearchBar>
             <RouterView :key="$route.fullPath"></RouterView>
         </main>
     </div>
@@ -45,6 +45,11 @@ export default {
         return {
             headerText: "Forchetta Italia",
             paragraphText: "Welcome to this unique website for recipes from the Italian cuisine!",
+        }
+    }, 
+    methods: {
+        clearSearchBar: function() {
+            this.$refs.child.clearSearch();
         }
     }
 }
