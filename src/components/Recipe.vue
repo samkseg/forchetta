@@ -3,14 +3,17 @@
         <div id="recipe-top-layout"></div>
         <div id="recipe-middle-layout"></div>
         <Rating :recipeId="recipeId"></Rating>
+        <Comments :recipeId="recipeId"></Comments>
     </div>
 </template>
 
 <script>
 import Rating from "./Rating.vue"
+import Comments from "./Comments.vue"
 export default {
     components: {
-        Rating
+        Rating,
+        Comments
     },
     data() {
         return {
