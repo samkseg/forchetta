@@ -31,7 +31,7 @@ export default {
         }
     },
     mounted() {
-        let ratingBar = document.querySelector("#rating-bar");
+        let ratingBar = document.getElementById("rating-bar");
         let count = 0;
         while (count < 5) {
             count += 1;
@@ -54,6 +54,7 @@ export default {
             let url = "https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes/" + this.recipeId + "/ratings";
             fetch(url, {
                 method: "POST",
+                mode: "cors",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify( {
                     rating: rate
