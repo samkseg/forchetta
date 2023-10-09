@@ -64,6 +64,10 @@
     border-radius: 5px;
 }
 
+.info-rating {
+    color: goldenrod;
+}
+
 .ing-header {
     margin-left: 10px;
     margin-bottom: 20px;
@@ -115,8 +119,4 @@ h2 {
 hr {
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.fa {
-    color: goldenrod;
 }
