@@ -13,6 +13,7 @@
 
 <script>
 export default {
+    emits: ["clearSearchBar"],
     data() {
         return {
             categories: [],
