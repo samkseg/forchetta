@@ -93,7 +93,7 @@ export default {
                         comment: this.commentText,
                         name: this.nameText
                     })
-                }).then(res => { console.log("Request complete! response: ", res); this.getComments(); });
+                }).then(res => { this.getComments(); }).catch((error) => console.log("Error"));;
                 this.commentText = "";
                 this.nameText = "";
                 this.isIncorrect = false;
