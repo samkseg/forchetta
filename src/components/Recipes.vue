@@ -58,7 +58,6 @@ export default {
                 listItem.classList.add("list-item");
                 let link = document.createElement("a");
                 
-                link.setAttribute("href", "#");
                 link.onclick = () => {this.loadRecipe(item._id)};
 
                 let top = document.createElement("div");

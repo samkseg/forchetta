@@ -56,5 +56,6 @@
     background-color: #c8d6e0;
     font-weight: bold;
     color: black;
+    cursor: pointer;
     transition: all 300ms;
 }
