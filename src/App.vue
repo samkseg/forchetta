@@ -1,12 +1,14 @@
 <template>
     <div v-if='["Start", "Category", "Search"].includes($route.name)' class="full-page-layout">
         <header class="header">
-            <h1>{{ headerText }}
-            <img class="italy" src="./assets/flag-italy.png" alt="Italian flag">
-            </h1>
+            <RouterLink :to='{ name: "Start" }'>
+                <h1>{{ headerText }}
+                    <img class="italy" src="./assets/flag-italy.png" alt="Italian flag">
+                </h1>
+            </RouterLink>
             <p class="header-text">{{ paragraphText }}</p>
         </header>
-        
+
         <nav class="menu">
             <Menu @clearSearchBar="clearSearchBar"></Menu>
         </nav>
@@ -18,9 +20,11 @@
     </div>
     <div v-if='["Recipe"].includes($route.name)' class="recipe-page-layout">
         <header class="header">
-            <h1>{{ headerText }}
-            <img class="italy" src="./assets/flag-italy.png" alt="Italian flag">
-            </h1>
+            <RouterLink :to='{ name: "Start" }'>
+                <h1>{{ headerText }}
+                    <img class="italy" src="./assets/flag-italy.png" alt="Italian flag">
+                </h1>
+            </RouterLink>
             <p class="header-text">{{ paragraphText }}</p>
         </header>
 
@@ -46,9 +50,9 @@ export default {
             headerText: "Forchetta Italia",
             paragraphText: "Welcome to this unique website for recipes from the Italian cuisine!",
         }
-    }, 
+    },
     methods: {
-        clearSearchBar: function() {
+        clearSearchBar: function () {
             this.$refs.child.clearSearch();
         }
     }
