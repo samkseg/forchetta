@@ -1,21 +1,14 @@
 <template>
-    <br>
     <hr>
-    <br>
-    <div v-if="isRated">
-        <br>
+    <div id="rating-message" v-if="isRated">
         <h1>Thank you for your rating!</h1>
-        <br>
     </div>
-    <div v-else="isRated">
+    <div id="rating-header" v-else="isRated">
         <h1>How did you like the recipe?</h1>
         <p>Click on a star to add you rating!</p>
-        <br>
         <div id="rating-bar"></div>
     </div>
-    <br>
     <hr>
-    <br>
 </template>
 
 <script>
@@ -58,7 +51,7 @@ export default {
                 body: JSON.stringify( {
                     rating: rate
                 })
-            }).then(res => { console.log("Request complete! response: ", res) });
+            }).catch((error) => console.log("Error"));;
         },
         selectStars: function(rate) {
             let star1 = document.getElementById("star1");

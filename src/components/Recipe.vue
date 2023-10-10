@@ -1,6 +1,7 @@
 <template>
     <div id="recipe">
         <div id="recipe-top-layout"></div>
+        <hr>
         <div id="recipe-middle-layout"></div>
         <Rating :recipeId="recipeId"></Rating>
         <Comments :recipeId="recipeId"></Comments>
