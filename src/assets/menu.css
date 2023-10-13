@@ -31,3 +31,23 @@ a:hover {
 .router-link-active {
   font-weight: bold;
 }
+
+@media only screen and (max-width : 575.98px) and (orientation: portrait) { 
+  .menu {
+    margin-right: 0px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-area: menu;
+    width: 100vw;
+}
+  
+  .menu-list {
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  .menu-header {
+    text-align: center;
+  }
+}

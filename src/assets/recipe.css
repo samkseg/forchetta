@@ -123,3 +123,52 @@ hr {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+@media only screen and (max-width : 575.98px) and (orientation: portrait) {
+    #recipe-top-layout {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-areas:
+            'header header header'
+            'image image image'
+            'description description description';
+        align-content: flex-start;
+        gap: 0;
+        max-width: 1000px;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    #recipe-middle-layout {
+        display: grid;
+        grid-template-areas:
+            'ing-header ins-header ins-header'
+            'ingredient ingredient ingredient'
+            'instruction instruction instruction';
+        grid-template-columns: repeat(3, 1fr);
+        align-content: flex-start;
+        gap: 0;
+        max-width: 1000px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .recipe-image {
+        float: none;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .info-bar {
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 10px;
+        background-color: #c8d6e0ad;
+        font-size: small;
+        border-radius: 5px;
+    }
+}

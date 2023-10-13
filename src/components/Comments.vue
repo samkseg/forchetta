@@ -63,7 +63,7 @@ export default {
                 top.appendChild(date);
 
                 let comment = document.createElement("p");
-                comment.classList.add("comment")
+                comment.classList.add("comment");
                 comment.appendChild(document.createTextNode(item.comment));
 
                 listItem.appendChild(top);
@@ -93,7 +93,7 @@ export default {
                         comment: this.commentText,
                         name: this.nameText
                     })
-                }).then(res => { this.getComments(); }).catch((error) => console.log("Error"));;
+                }).then(res => { this.getComments(); }).catch((error) => console.log("Error"));
                 this.commentText = "";
                 this.nameText = "";
                 this.isIncorrect = false;
