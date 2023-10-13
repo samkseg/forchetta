@@ -39,6 +39,7 @@ a:hover {
     display: grid;
     grid-area: menu;
     width: 100vw;
+    min-width: 340px;
 }
   
   .menu-list {

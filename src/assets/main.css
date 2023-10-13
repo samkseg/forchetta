@@ -83,26 +83,20 @@ ul {
 @media only screen and (max-width : 575.98px) and (orientation: portrait) {
   .full-page-layout {
     display: grid;
-    width: 100vw;
-    height: 100vh;
     grid-template-areas:
       'header header header header header'
       'menu menu menu menu menu'
       'main main main main main'
       'footer footer footer footer footer';
     align-content: flex-start;
-    overflow-x: hidden;
   }
   
   .recipe-page-layout {
     display: grid;
-    width: 100vw;
-    height: 100vh;
     grid-template-areas:
       'header header header'
       'main main main'
       'footer footer footer';
     align-content: flex-start;
-    overflow-x: hidden;
   }
 }

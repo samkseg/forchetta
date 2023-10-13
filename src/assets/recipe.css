@@ -127,17 +127,12 @@ hr {
 @media only screen and (max-width : 575.98px) and (orientation: portrait) {
     #recipe-top-layout {
         display: grid;
-        width: 100vw;
-        height: 100vh;
         grid-template-areas:
             'header header header'
             'image image image'
             'description description description';
         align-content: flex-start;
-        gap: 0;
         max-width: 1000px;
-        height: auto;
-        margin-bottom: 40px;
     }
 
     #recipe-middle-layout {
@@ -146,12 +141,8 @@ hr {
             'ing-header ins-header ins-header'
             'ingredient ingredient ingredient'
             'instruction instruction instruction';
-        grid-template-columns: repeat(3, 1fr);
         align-content: flex-start;
-        gap: 0;
         max-width: 1000px;
-        margin-top: 20px;
-        margin-bottom: 40px;
     }
 
     .recipe-image {
@@ -163,7 +154,7 @@ hr {
     }
 
     .info-bar {
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: 50px;
         margin-right: 50px;
         padding: 10px;

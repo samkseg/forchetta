@@ -61,9 +61,7 @@
 
 @media only screen and (max-width : 575.98px) and (orientation: portrait) {
     .thumb-nail {
-        margin-right: 20px;
         margin-top: 15px;
-        float: none;
         max-width: 100%;
         border: 2px solid hsla(0, 0%, 0%, 0.784);
         border-radius: 5px;
