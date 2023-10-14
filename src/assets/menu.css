@@ -32,7 +32,7 @@ a:hover {
   font-weight: bold;
 }
 
-@media only screen and (max-width : 575.98px) and (orientation: portrait) { 
+@media only screen and (max-width : 1024px) and (orientation: portrait) { 
   .menu {
     margin-right: 0px;
     margin-bottom: 20px;
