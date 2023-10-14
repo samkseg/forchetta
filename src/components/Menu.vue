@@ -1,6 +1,6 @@
 <template>
     <h2 class="menu-header">Categories</h2>
-    <ul>
+    <ul class="menu-list">
         <li class="menu-links">
             <RouterLink @click="$emit('clearSearchBar')" :to='{ name: "Start" }'>All({{ all.length }})</RouterLink>
         </li>

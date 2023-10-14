@@ -72,7 +72,8 @@ export default {
                 score -= 1;
                 count -= 1;
             }
-            infoBar.appendChild(document.createTextNode(" | " + data.ingredients.length + " INGREDIENTS | " + data.timeInMins + " MIN"));
+            infoBar.appendChild(document.createTextNode(" | " + data.ingredients.length));
+            infoBar.appendChild(document.createTextNode(" INGREDIENTS | " + data.timeInMins + " MIN"));
 
             paragraph.appendChild(document.createTextNode(data.description));
             description.appendChild(infoBar);

@@ -51,7 +51,7 @@ export default {
                 body: JSON.stringify( {
                     rating: rate
                 })
-            }).catch((error) => console.log("Error"));;
+            }).catch((error) => console.log("Error"));
         },
         selectStars: function(rate) {
             let star1 = document.getElementById("star1");
