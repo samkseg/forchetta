@@ -81,8 +81,9 @@
     grid-area: ingredient;
     background-color: #c8d6e0ad;
     border-radius: 5px;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-left: 15px;
+    padding-bottom: 15px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -122,6 +123,14 @@ h2 {
 hr {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+@media only screen and (max-width : 1024px) and (orientation: landscape) {
+    .info-bar {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: small;
+    }
 }
 
 @media only screen and (max-width : 800px) and (orientation: portrait) {
