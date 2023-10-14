@@ -68,7 +68,7 @@
     }
 }
 
-@media only screen and (max-width : 1024px) and (orientation: landscape) {
+@media only screen and (max-width : 800px) and (orientation: landscape) {
     .header-title {
         font-size: large;
         text-align: left;
@@ -80,7 +80,7 @@
     }
 }
 
-@media only screen and (max-width : 1024px) and (orientation: portrait) {
+@media only screen and (max-width : 800px) and (orientation: portrait) {
     .thumb-nail {
         margin-top: 15px;
         max-width: 100%;

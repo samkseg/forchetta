@@ -2,8 +2,10 @@
   grid-area: menu;
   background-color: #c8d6e0ad;
   margin-right: 20px;
+  padding-bottom: 10px;
   text-align: left;
   border-radius: 5px;
+  max-width: 150px;
 }
 
 .menu-header {
@@ -32,12 +34,13 @@ a:hover {
   font-weight: bold;
 }
 
-@media only screen and (max-width : 1024px) and (orientation: portrait) { 
+@media only screen and (max-width : 800px) and (orientation: portrait) { 
   .menu {
     margin-right: 0px;
     margin-bottom: 20px;
     display: grid;
     grid-area: menu;
+    max-width: none;
     width: 100vw;
     min-width: 340px;
 }

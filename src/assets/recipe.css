@@ -16,6 +16,8 @@
     max-width: 1000px;
     height: auto;
     margin-bottom: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 #recipe-middle-layout {
@@ -37,10 +39,8 @@
 
 .recipe-image {
     grid-area: image;
-    margin-right: 10px;
     margin-left: 10px;
     margin-top: 15x;
-    margin-bottom: 15px;
     float: right;
     max-width: 333px;
     border-radius: 5px;
@@ -49,12 +49,10 @@
 .description {
     grid-area: description;
     margin-right: 10px;
-    margin-left: 10px;
     display: flex;
     font-size: large;
     text-align: justify;
     border-radius: 5px;
-    padding: 10px;
 }
 
 .info-bar {
@@ -126,7 +124,7 @@ hr {
     margin-right: 10px;
 }
 
-@media only screen and (max-width : 575.98px) and (orientation: portrait) {
+@media only screen and (max-width : 800px) and (orientation: portrait) {
     #recipe-top-layout {
         display: grid;
         grid-template-areas:
@@ -154,12 +152,13 @@ hr {
         width: 100%;
         height: auto;
         margin: 0 auto;
+        max-width: 800px;
     }
 
     .info-bar {
         margin-top: 20px;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
         padding: 10px;
         background-color: #c8d6e0ad;
         font-size: small;
