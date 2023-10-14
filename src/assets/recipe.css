@@ -155,6 +155,10 @@ hr {
         max-width: 800px;
     }
 
+    .description {
+        margin-right: 0px;
+    }
+
     .info-bar {
         margin-top: 20px;
         margin-left: 20px;
