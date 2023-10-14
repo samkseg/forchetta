@@ -35,6 +35,7 @@
 .header-rating {
     margin-top: 10px;
     float: right;
+    color: goldenrod;
 }
 
 .recipe-info {
@@ -59,7 +60,7 @@
     transition: all 300ms;
 }
 
-@media only screen and (max-height: 1025px) and (max-width : 769px) and (orientation: portrait) {
+@media only screen and (max-height: 1024px) and (orientation: portrait) {
     .header-title {
         font-size: x-large;
         text-align: left;
@@ -69,13 +70,17 @@
 
 @media only screen and (max-width : 1024px) and (orientation: landscape) {
     .header-title {
-        font-size: x-large;
+        font-size: large;
         text-align: left;
         color: black;
     }
+    .header-rating {
+        font-size: medium;
+        margin-top: 0px;
+    }
 }
 
-@media only screen and (max-width : 575.98px) and (orientation: portrait) {
+@media only screen and (max-width : 1024px) and (orientation: portrait) {
     .thumb-nail {
         margin-top: 15px;
         max-width: 100%;
@@ -90,6 +95,10 @@
         font-size: x-large;
         text-align: left;
         color: black;
+    }
+
+    .header-rating {
+        margin-top: 0px;
     }
 
     .recipe-info {

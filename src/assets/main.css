@@ -81,7 +81,7 @@ ul {
   list-style-type: none;
 }
 
-@media only screen and (max-width : 575.98px) and (orientation: portrait) {
+@media only screen and (max-width : 1024px) and (orientation: portrait) {
   .full-page-layout {
     display: grid;
     grid-template-areas:
