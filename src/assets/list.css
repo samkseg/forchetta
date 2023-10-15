@@ -70,13 +70,19 @@
 
 @media only screen and (max-width : 800px) and (orientation: landscape) {
     .header-title {
-        font-size: large;
+        font-size: x-large;
         text-align: left;
         color: black;
     }
+
+    .header-div {
+        display:inline;
+        font-size: x-large;
+        text-align: right;
+    }
     .header-rating {
-        font-size: medium;
-        margin-top: 0px;
+        font-size: small;
+        margin-top: 10px;
     }
 }
 
