@@ -15,7 +15,7 @@
 
         <main class="main">
             <SearchBar ref="child"></SearchBar>
-            <RouterView :key="$route.fullPath"></RouterView>
+            <RouterView></RouterView>
         </main>
     </div>
     <div v-if='["Recipe"].includes($route.name)' class="recipe-page-layout">
@@ -29,7 +29,7 @@
         </header>
 
         <main class="main-recipe">
-            <RouterView :key="$route.fullPath"></RouterView>
+            <RouterView></RouterView>
         </main>
     </div>
 </template>

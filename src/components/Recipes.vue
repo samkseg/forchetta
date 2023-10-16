@@ -1,4 +1,7 @@
 <template>
+    <div class="no-result-box" v-if="noResult">
+        <p class="no-result-message">{{ message }}</p>
+    </div>
     <ul id="recipes">
     </ul>
 </template>
@@ -6,24 +9,31 @@
 <script>
 export default {
     data() {
-        return {}
+        return {
+            message: "Couldn't find any recipes!",
+            noResult: false
+        }
     },
     props: {
         categoryId: "",
-        search: ""
+        search: "",
     },
     async created() {
+        this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes").then(data => { this.saveData(data); }).catch((error) => console.log("Error"));
+    },
+    mounted() {
         this.$watch(
             () => this.$route.params,
             () => {
-                if(!this.categoryId && !this.search) {
+                this.noResult = false;
+                if (!this.categoryId && !this.search) {
                     this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes").then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
                 }
-                if(this.categoryId) {
+                if (this.categoryId) {
                     this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/categories/" + this.categoryId + "/recipes").then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
                 }
-                if(this.search) {
-                    this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes?query=" + this.search).then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
+                if (this.search) {
+                    this.renderData(this.findRecipes(this.search));
                 }
             },
             { immediate: true }
@@ -48,17 +58,47 @@ export default {
                     }
             return star;
         },
-        loadRecipe(recipe){
+        findRecipes: function (search) {
+            let result = [];
+            for (let item of JSON.parse(localStorage.recipesList)) {
+                let catMatch = false;
+                for (let cat of item.categories) {
+                    if (cat.toLowerCase().includes(search.toLowerCase())) {
+                        catMatch = true;
+                    }
+                }
+                if (item.title.toLowerCase().includes(search.toLowerCase()) || catMatch == true) {
+                    result.push(item);
+                }
+            }
+            if (result.length == 0) {
+                this.noResult = true;
+            } else {
+                this.noResult = false;
+            }
+            return result;
+        },
+        loadRecipe(recipe) {
             this.$router.push({ name: "Recipe", params: { recipeId: recipe } });
         },
-        renderData: async function (data) {
+        saveData: function (data) {
+            localStorage.recipesList = JSON.stringify(data);
+        },
+        clearList: function () {
+            let list = document.getElementById("recipes");
+            while (list.firstChild) {
+                list.removeChild(list.firstChild);
+            }
+        },
+        renderData: function (data) {
+            this.clearList();
             let list = document.getElementById("recipes");
             for (let item of data) {
                 let listItem = document.createElement("li");
                 listItem.classList.add("list-item");
                 let link = document.createElement("a");
-                
-                link.onclick = () => {this.loadRecipe(item._id)};
+
+                link.onclick = () => { this.loadRecipe(item._id) };
 
                 let top = document.createElement("div");
                 top.classList.add("top");

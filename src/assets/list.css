@@ -1,3 +1,13 @@
+.no-result-box {
+    width: 80vw;
+    max-width: 800px;
+}
+
+.no-result-message {
+    margin-top: 20px;
+    font-size: large;
+}
+
 .list-item {
     background-color: #c8d6e0ad;
     margin-top: 15px;
@@ -61,6 +71,9 @@
 }
 
 @media only screen and (max-height: 1024px) and (orientation: portrait) {
+    .no-result-box {
+        width: 100%;
+    }
     .header-title {
         font-size: x-large;
         text-align: left;
@@ -69,6 +82,9 @@
 }
 
 @media only screen and (max-width : 800px) and (orientation: landscape) {
+    .no-result-box {
+        width: 74vw;
+    }
     .header-title {
         font-size: x-large;
         text-align: left;
