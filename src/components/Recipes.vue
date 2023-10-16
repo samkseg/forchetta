@@ -21,18 +21,22 @@ export default {
     async created() {
         this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes").then(data => { this.saveData(data); }).catch((error) => console.log("Error"));
     },
-    mounted() {
+    async mounted() {
         this.$watch(
             () => this.$route.params,
             () => {
                 this.noResult = false;
                 if (!this.categoryId && !this.search) {
                     this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/recipes").then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
+                    localStorage.search = "";
                 }
                 if (this.categoryId) {
                     this.fetchData("https://jau22-recept-grupp7-4x3d2bpwj8jg.reky.se/categories/" + this.categoryId + "/recipes").then(data => { this.renderData(data); }).catch((error) => console.log("Error"));
+                    localStorage.search = "";
                 }
+                
                 if (this.search) {
+                    localStorage.search = this.search;
                     this.renderData(this.findRecipes(this.search));
                 }
             },
