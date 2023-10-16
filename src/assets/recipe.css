@@ -137,9 +137,9 @@ hr {
     #recipe-top-layout {
         display: grid;
         grid-template-areas:
-            'header header header'
-            'image image image'
-            'description description description';
+            'header'
+            'image'
+            'description';
         align-content: flex-start;
         max-width: 1000px;
     }
