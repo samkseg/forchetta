@@ -1,6 +1,6 @@
 <template>
     <div class="search-bar">
-        <input class="search-field" type="text" v-model="searchText" 
+        <input id="search-field" class="search-field" type="text" v-model="searchText" 
         @keyup="dynamicSearch" 
         @keypress.enter="enterSearch" 
         placeholder="Search Recipe...">
@@ -14,10 +14,15 @@ export default {
             searchText: ""
         }
     },
+    mounted() {
+        this.searchText = localStorage.search;
+        document.getElementById("search-field").select();
+    },
     methods: {
         dynamicSearch: function() {
             if (this.searchText != null & this.searchText != "") {
                 this.$router.push({ name: "Search", params: { search: this.searchText } })
+                localStorage.search = this.searchText;
             }
         }, 
         enterSearch: function () {
@@ -28,6 +33,7 @@ export default {
         }, 
         clearSearch: function() {
             this.searchText = "";
+            localStorage.search = "";
         }
     }
 }

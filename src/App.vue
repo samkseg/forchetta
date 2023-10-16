@@ -1,7 +1,7 @@
 <template>
     <div v-if='["Start", "Category", "Search"].includes($route.name)' class="full-page-layout">
         <header class="header">
-            <RouterLink :to='{ name: "Start" }'>
+            <RouterLink @click="clearSearchBar" :to='{ name: "Start" }'>
                 <h1>{{ headerText }}
                     <img class="italy" src="./assets/flag-italy.png" alt="Italian flag">
                 </h1>
@@ -14,8 +14,8 @@
         </nav>
 
         <main class="main">
-            <SearchBar ref="child"></SearchBar>
-            <RouterView :key="$route.fullPath"></RouterView>
+            <SearchBar ref="child" :key="$route.fullPath"></SearchBar>
+            <RouterView></RouterView>
         </main>
     </div>
     <div v-if='["Recipe"].includes($route.name)' class="recipe-page-layout">
@@ -29,7 +29,7 @@
         </header>
 
         <main class="main-recipe">
-            <RouterView :key="$route.fullPath"></RouterView>
+            <RouterView></RouterView>
         </main>
     </div>
 </template>
