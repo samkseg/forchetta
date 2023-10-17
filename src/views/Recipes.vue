@@ -19,7 +19,6 @@
                         <p class="footer">{{ item.ingredients.length }} INGREDIENTS | {{ item.timeInMins }} MINUTES</p>
                     </p>
                 </div>
-                <p class="footer"></p>
             </RouterLink>
         </li>
     </ul>

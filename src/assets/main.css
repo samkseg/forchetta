@@ -77,10 +77,6 @@ p {
   max-width: 1280px;
 }
 
-ul {
-  list-style-type: none;
-}
-
 @media only screen and (max-width : 800px) and (orientation: portrait) {
   .full-page-layout {
     display: grid;
