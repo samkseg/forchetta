@@ -1,6 +1,6 @@
 import './assets/main.css'
-import Recipes from "./components/Recipes.vue"
-import Recipe from "./components/Recipe.vue"
+import Recipes from "./views/Recipes.vue"
+import Recipe from "./views/Recipe.vue"
 
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
