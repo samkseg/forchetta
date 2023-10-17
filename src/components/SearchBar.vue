@@ -15,8 +15,16 @@ export default {
         }
     },
     mounted() {
-        this.searchText = localStorage.search;
-        document.getElementById("search-field").select();
+        if(this.$route.params.search) {
+            this.searchText = this.$route.params.search;
+        }
+    },
+    watch: {
+        "$route.params.search"(newVal, oldVal) {
+            if (newVal != oldVal) {
+                this.searchText = this.$route.params.search;
+            }
+        }
     },
     methods: {
         dynamicSearch: function() {
@@ -28,7 +36,6 @@ export default {
         enterSearch: function () {
             if (this.searchText != null & this.searchText != "") {
                 this.$router.push({ name: "Search", params: { search: this.searchText } })
-                this.searchText = "";
             }
         }, 
         clearSearch: function() {

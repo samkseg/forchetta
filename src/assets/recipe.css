@@ -125,7 +125,7 @@ hr {
     margin-right: 10px;
 }
 
-@media only screen and (max-width : 1024px) and (orientation: landscape) {
+@media only screen and (max-width : 998px) and (orientation: landscape) {
     .info-bar {
         margin-left: 20px;
         margin-right: 20px;
@@ -140,7 +140,6 @@ hr {
             'header'
             'image'
             'description';
-        align-content: flex-start;
         max-width: 1000px;
     }
 

@@ -14,8 +14,8 @@
         </nav>
 
         <main class="main">
-            <SearchBar ref="child" :key="$route.fullPath"></SearchBar>
-            <RouterView></RouterView>
+            <SearchBar ref="child"></SearchBar>
+            <RouterView :key="$route.fullPath"></RouterView>
         </main>
     </div>
     <div v-if='["Recipe"].includes($route.name)' class="recipe-page-layout">
@@ -29,13 +29,14 @@
         </header>
 
         <main class="main-recipe">
-            <RouterView></RouterView>
+            <RouterView :key="$route.fullPath"></RouterView>
         </main>
     </div>
 </template>
 
 <script>
-import Recipes from "./components/Recipes.vue"
+import Recipe from "./views/Recipe.vue"
+import Recipes from "./views/Recipes.vue"
 import SearchBar from "./components/SearchBar.vue"
 import Menu from "./components/Menu.vue"
 
@@ -43,7 +44,8 @@ export default {
     components: {
         Menu,
         SearchBar,
-        Recipes
+        Recipes,
+        Recipe
     },
     data() {
         return {

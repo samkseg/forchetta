@@ -32,6 +32,7 @@
 }
 
 .header-div {
+    margin-top: 5px;
     font-size: x-large;
     text-align: right;
 }
@@ -51,15 +52,13 @@
 .recipe-info {
     text-align: justify;
     font-size: medium;
+    padding-bottom: 10px;
 }
 
 .footer {
     text-align: left;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: large;
-    font-weight: b;
 }
 
 .list-item:hover {
@@ -92,7 +91,8 @@
     }
 
     .header-div {
-        display:inline;
+        margin-top: 10px;
+        display:block;
         font-size: x-large;
         text-align: right;
     }
