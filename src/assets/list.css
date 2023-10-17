@@ -1,0 +1,129 @@
+.no-result-box {
+    width: 80vw;
+    max-width: 800px;
+}
+
+.no-result-message {
+    margin-top: 20px;
+    font-size: large;
+}
+
+.list-item {
+    background-color: #c8d6e0ad;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.thumb-nail {
+    margin-right: 20px;
+    margin-top: 15px;
+    float: left;
+    max-width: 270px;
+    border: 2px solid hsla(0, 0%, 0%, 0.784);
+    border-radius: 5px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.header-div {
+    margin-top: 5px;
+    font-size: x-large;
+    text-align: right;
+}
+
+.header-title {
+    font-size: xx-large;
+    text-align: left;
+    color: black;
+}
+
+.header-rating {
+    margin-top: 10px;
+    float: right;
+    color: goldenrod;
+}
+
+.recipe-info {
+    text-align: justify;
+    font-size: medium;
+    padding-bottom: 10px;
+}
+
+.footer {
+    text-align: left;
+    margin-top: 10px;
+    font-size: large;
+}
+
+.list-item:hover {
+    background-color: #c8d6e0;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+@media only screen and (max-height: 1024px) and (orientation: portrait) {
+    .no-result-box {
+        width: 100%;
+    }
+    .header-title {
+        font-size: x-large;
+        text-align: left;
+        color: black;
+    }
+}
+
+@media only screen and (max-width : 800px) and (orientation: landscape) {
+    .no-result-box {
+        width: 74vw;
+    }
+    .header-title {
+        font-size: x-large;
+        text-align: left;
+        color: black;
+    }
+
+    .header-div {
+        margin-top: 10px;
+        display:block;
+        font-size: x-large;
+        text-align: right;
+    }
+    .header-rating {
+        font-size: small;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width : 800px) and (orientation: portrait) {
+    .thumb-nail {
+        margin-top: 15px;
+        max-width: 100%;
+        border: 2px solid hsla(0, 0%, 0%, 0.784);
+        border-radius: 5px;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header-title {
+        font-size: x-large;
+        text-align: left;
+        color: black;
+    }
+
+    .header-rating {
+        margin-top: 0px;
+    }
+
+    .recipe-info {
+        margin-top: 15px;
+    }
+}

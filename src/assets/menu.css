@@ -1,0 +1,57 @@
+.menu {
+  grid-area: menu;
+  background-color: #c8d6e0ad;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  text-align: left;
+  border-radius: 5px;
+  max-width: 150px;
+}
+
+.menu-header {
+  text-align: left;
+  color: black;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+}
+
+.menu-links {
+  font-size: medium;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+a:hover {
+  color: black;
+  font-weight: bold;
+  transition: 80ms;
+}
+
+.router-link-active {
+  font-weight: bold;
+}
+
+@media only screen and (max-width : 800px) and (orientation: portrait) { 
+  .menu {
+    margin-right: 0px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-area: menu;
+    max-width: none;
+    width: 100vw;
+    min-width: 340px;
+}
+  
+  .menu-list {
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  .menu-header {
+    text-align: center;
+  }
+}

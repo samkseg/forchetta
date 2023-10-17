@@ -1,0 +1,179 @@
+#recipe {
+    color: black;
+    text-align: center;
+
+}
+
+#recipe-top-layout {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+        'header header header'
+        'description description image';
+    align-content: flex-start;
+    gap: 0;
+    max-width: 1000px;
+    height: auto;
+    margin-bottom: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#recipe-middle-layout {
+    display: grid;
+    grid-template-areas:
+        'ing-header ins-header ins-header'
+        'ingredient instruction instruction';
+    grid-template-columns: repeat(3, 1fr);
+    align-content: flex-start;
+    gap: 0;
+    max-width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.recipe-image {
+    grid-area: image;
+    margin-left: 10px;
+    margin-top: 15x;
+    float: right;
+    max-width: 333px;
+    border-radius: 5px;
+}
+
+.description {
+    grid-area: description;
+    margin-right: 10px;
+    display: flex;
+    font-size: large;
+    text-align: justify;
+    border-radius: 5px;
+}
+
+.info-bar {
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    background-color: #c8d6e0ad;
+    font-size: x-large;
+    border-radius: 5px;
+}
+
+.info-rating {
+    color: goldenrod;
+}
+
+.ing-header {
+    grid-area: ing-header;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: black;
+    padding-top: 10px;
+}
+
+.ingredient {
+    grid-area: ingredient;
+    background-color: #c8d6e0ad;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+li {
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+}
+
+.ins-header {
+    grid-area: ins-header;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: black;
+    padding-top: 10px;
+}
+
+.instruction {
+    grid-area: instruction;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: large;
+}
+
+.instruction-item {
+    background-color: #c8d6e0ad;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+hr {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width : 998px) and (orientation: landscape) {
+    .info-bar {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width : 800px) and (orientation: portrait) {
+    #recipe-top-layout {
+        display: grid;
+        grid-template-areas:
+            'header'
+            'image'
+            'description';
+        max-width: 1000px;
+    }
+
+    #recipe-middle-layout {
+        display: grid;
+        grid-template-areas:
+            'ing-header ing-header ing-header'
+            'ingredient ingredient ingredient'
+            'ins-header ins-header ins-header'
+            'instruction instruction instruction';
+        align-content: flex-start;
+        max-width: 1000px;
+    }
+
+    .recipe-image {
+        float: none;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    .description {
+        margin-right: 0px;
+    }
+
+    .info-bar {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 10px;
+        background-color: #c8d6e0ad;
+        font-size: small;
+        border-radius: 5px;
+    }
+}

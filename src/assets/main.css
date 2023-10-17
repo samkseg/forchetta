@@ -1,35 +1,99 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: center;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
 }
 
-a,
-.green {
+#app {
+  font-weight: normal;
+  background-color: white;
+}
+
+.full-page-layout {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    'header header header header header'
+    'menu main main main main'
+    'footer footer footer footer footer';
+  align-content: flex-start;
+  overflow-x: hidden;
+}
+
+.recipe-page-layout {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    'header header header'
+    'main main main'
+    'footer footer footer';
+  align-content: flex-start;
+  overflow-x: hidden;
+}
+
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: black;
   transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+ul {
+  list-style-type: none;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+.header {
+  grid-area: header;
+  margin-bottom: 25px;
+  color: black;
+  font-size: 36px;
+}
+
+.italy {
+  max-width: 70px;
+}
+
+.header-text {
+  font-size: 28px;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+.main {
+  grid-area: main;
+  max-width: 800px;
+}
+
+.main-recipe {
+  grid-area: main;
+  max-width: 1280px;
+}
+
+@media only screen and (max-width : 800px) and (orientation: portrait) {
+  .full-page-layout {
+    display: grid;
+    grid-template-areas:
+      'header header header header header'
+      'menu menu menu menu menu'
+      'main main main main main'
+      'footer footer footer footer footer';
+    align-content: flex-start;
   }
 
-  #app {
+  .recipe-page-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    grid-template-areas:
+      'header header header'
+      'main main main'
+      'footer footer footer';
+    align-content: flex-start;
   }
 }
